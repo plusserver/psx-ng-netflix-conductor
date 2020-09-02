@@ -1,16 +1,23 @@
 {
   "name": "@psx/ng-netflix-conductor",
+  "private": false,
   "author": {
     "email": "christian.ziermann@plusserver.com",
     "name": "Christian Ziermann"
   },
+  "homepage": "https://github.com/plusserver/psx-ng-netflix-conductor#readme",
   "repository": {
-    "url": "git@github.com:cziermann-ps/-psx-ng-netflix-conductor.git",
-    "type": "MIT",
-    "directory": "projects/src/lib"
+    "url": "https://github.com/plusserver/psx-ng-netflix-conductor",
+    "type": "git"
+  },
+  "bugs": {
+    "url": "https://github.com/plusserver/psx-ng-netflix-conductor/issues",
+    "email": "project@hostname.com"
   },
   "version": "1.0.0",
   "publishConfig": {
+    "access": "public",
+    "tag": "conductor,angular,client",
     "registry": "https://registry.npmjs.org/"
   },
   "peerDependencies": {

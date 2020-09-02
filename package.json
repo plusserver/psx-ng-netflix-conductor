@@ -2,7 +2,7 @@
   "name": "@psx/ng-netflix-conductor",
   "version": "1.0.0",
   "repository": {
-    "url": "git@github.com:cziermann-ps/psx-ng-netflix-conductor.git",
+    "url": "https://github.com/plusserver/psx-ng-netflix-conductor",
     "type": "MIT",
     "directory": "projects/src/lib"
   },
