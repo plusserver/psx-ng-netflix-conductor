@@ -11,9 +11,8 @@
   },
   "version": "1.0.0",
   "publishConfig": {
-    "registry": "https://nexus.psmanaged.com/repository/internal_development_npm/"
+    "registry": "https://registry.npmjs.org/"
   },
-
   "peerDependencies": {
     "@angular/common": "^10.0.14",
     "@angular/core": "^10.0.14"

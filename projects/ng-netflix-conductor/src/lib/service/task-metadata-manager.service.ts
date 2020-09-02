@@ -11,7 +11,6 @@ export class TaskMetadataManagerService {
   public apiEndpoint: string;
 
   constructor(@Inject(APP_CONFIG) options: ConductorSDKOptions, protected client: HttpClient) {
-
     const { apiEndpoint } = options;
     if (!apiEndpoint) {
       throw new Error('no apiEndpoint given!')
