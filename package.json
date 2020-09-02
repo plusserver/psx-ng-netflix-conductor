@@ -16,8 +16,7 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e
-    2 e "
+    "e2e": "ng e2e"
   },
   "dependencies": {
     "@angular/animations": "~10.0.9",
