@@ -6,5 +6,12 @@
 */
 {
   "files": [],
-  "references": []
+  "references": [
+    {
+      "path": "./projects/ng-netflix-conductor/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/ng-netflix-conductor/tsconfig.spec.json"
+    }
+]
 }

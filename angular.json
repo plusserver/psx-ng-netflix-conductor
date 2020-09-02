@@ -2,5 +2,46 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "newProjectRoot": "projects",
-  "projects": {}
+  "projects": {
+    "ng-netflix-conductor": {
+      "projectType": "library",
+      "root": "projects/ng-netflix-conductor",
+      "sourceRoot": "projects/ng-netflix-conductor/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ng-netflix-conductor/tsconfig.lib.json",
+            "project": "projects/ng-netflix-conductor/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ng-netflix-conductor/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ng-netflix-conductor/src/test.ts",
+            "tsConfig": "projects/ng-netflix-conductor/tsconfig.spec.json",
+            "karmaConfig": "projects/ng-netflix-conductor/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ng-netflix-conductor/tsconfig.lib.json",
+              "projects/ng-netflix-conductor/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }},
+  "defaultProject": "ng-netflix-conductor"
 }

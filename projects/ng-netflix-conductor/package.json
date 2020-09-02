@@ -1,0 +1,24 @@
+{
+  "name": "@psx/ng-netflix-conductor",
+  "author": {
+    "email": "christian.ziermann@plusserver.com",
+    "name": "Christian Ziermann"
+  },
+  "repository": {
+    "url": "git@github.com:cziermann-ps/-psx-ng-netflix-conductor.git",
+    "type": "MIT",
+    "directory": "projects/src/lib"
+  },
+  "version": "1.0.0",
+  "publishConfig": {
+    "registry": "https://nexus.psmanaged.com/repository/internal_development_npm/"
+  },
+
+  "peerDependencies": {
+    "@angular/common": "^10.0.14",
+    "@angular/core": "^10.0.14"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0"
+  }
+}
