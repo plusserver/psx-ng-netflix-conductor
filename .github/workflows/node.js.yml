@@ -27,5 +27,5 @@ jobs:
     - run: |
         npm install
         npm run build
-        cd dist/psx-ng-netflix-conductor
+        cd dist/ng-netflix-conductor
         npm publish
