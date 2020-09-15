@@ -42,15 +42,8 @@ export class WorflowManagerService {
   }
 
   startWorkflow(options: StartWorkflowOptions): Observable<Workflow> {
-    const httpOptions = {
-      headers: new HttpHeaders({
-        'Accept': 'text/html, application/xhtml+xml, */*',
-        'Content-Type': 'application/x-www-form-urlencoded'
-      }),
-      responseType: 'text'
-    };
     const subject = new Subject<Workflow>();
-    this.client.post<string>(this.apiEndpoint + '/workflow', httpOptions ).subscribe(
+    this.client.post(this.apiEndpoint + '/workflow', options, {responseType: "text"}).subscribe(
       (workflowId: string) => {
         this.retrieveWorkflow(workflowId).subscribe((workflow: Workflow) => {
           if (workflow.workflowId === workflowId) {
