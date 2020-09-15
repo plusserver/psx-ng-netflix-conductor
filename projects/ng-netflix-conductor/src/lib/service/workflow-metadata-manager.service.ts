@@ -21,7 +21,7 @@ export class WorkflowMetadataManagerService {
   }
 
   getAllWorkflows(): Observable<WorkflowDefinition[]> {
-    return this.client.get<WorkflowDefinition[]>('/metadata/workflow');
+    return this.client.get<WorkflowDefinition[]>(this.apiEndpoint +  '/metadata/workflow');
   }
 
   getWorkflow(name: string, version?: number): Observable<WorkflowDefinition> {

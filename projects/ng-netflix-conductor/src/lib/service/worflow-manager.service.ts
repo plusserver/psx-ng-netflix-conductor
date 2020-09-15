@@ -1,5 +1,5 @@
 import { Injectable, Inject } from '@angular/core';
-import { HttpClient, HttpParams } from '@angular/common/http';
+import { HttpClient, HttpParams, HttpHeaders } from '@angular/common/http';
 import { ConductorSDKOptions, StartWorkflowOptions, Workflow } from '../types';
 import { APP_CONFIG } from '../config';
 import { Observable, Subject } from 'rxjs';
@@ -42,8 +42,15 @@ export class WorflowManagerService {
   }
 
   startWorkflow(options: StartWorkflowOptions): Observable<Workflow> {
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Accept': 'text/html, application/xhtml+xml, */*',
+        'Content-Type': 'application/x-www-form-urlencoded'
+      }),
+      responseType: 'text'
+    };
     const subject = new Subject<Workflow>();
-    this.client.post<string>(this.apiEndpoint + '/workflow', options).subscribe(
+    this.client.post<string>(this.apiEndpoint + '/workflow', httpOptions ).subscribe(
       (workflowId: string) => {
         this.retrieveWorkflow(workflowId).subscribe((workflow: Workflow) => {
           if (workflow.workflowId === workflowId) {

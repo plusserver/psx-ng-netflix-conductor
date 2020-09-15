@@ -1,5 +1,5 @@
 {
-  "name": "@psx/ng-netflix-conductor",
+  "name": "ng-netflix-conductor",
   "private": false,
   "author": {
     "email": "christian.ziermann@plusserver.com",
@@ -14,10 +14,10 @@
     "url": "https://github.com/plusserver/psx-ng-netflix-conductor/issues",
     "email": "project@hostname.com"
   },
-  "version": "1.0.0",
+  "version": "1.0.6",
   "publishConfig": {
     "access": "public",
-    "tag": "conductor,angular,client",
+    "tag": "latest",
     "registry": "https://registry.npmjs.org/"
   },
   "peerDependencies": {
