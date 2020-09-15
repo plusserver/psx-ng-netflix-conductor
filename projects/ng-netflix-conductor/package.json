@@ -14,7 +14,7 @@
     "url": "https://github.com/plusserver/psx-ng-netflix-conductor/issues",
     "email": "project@hostname.com"
   },
-  "version": "1.0.6",
+  "version": "1.0.7",
   "publishConfig": {
     "access": "public",
     "tag": "latest",
