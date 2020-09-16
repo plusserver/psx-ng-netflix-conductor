@@ -20,7 +20,7 @@ interface SkipWorkflowTaskOptions {
 @Injectable({
   providedIn: 'root'
 })
-export class WorflowManagerService {
+export class WorkflowManagerService {
 
   public apiEndpoint: string
 
@@ -46,7 +46,7 @@ export class WorflowManagerService {
     this.client.post(this.apiEndpoint + '/workflow', options, {responseType: "text"}).subscribe(
       (workflowId: string) => {
         this.retrieveWorkflow(workflowId).subscribe((workflow: Workflow) => {
-          if (workflow.workflowId === workflowId) {
+          if (workflow.workflowId !== workflowId) {
             subject.error('Start a workflow, but can not find it');
             return;
           }
@@ -221,7 +221,7 @@ export class WorflowManagerService {
    */
   skipWorkflowTask(workflowId: string, options: SkipWorkflowTaskOptions) {
     const subject = new Subject<Workflow>();
-    if (options.taskReferenceName) {
+    if (!options.taskReferenceName) {
       subject.error('taskReferenceName should be not empty');
       return;
     }

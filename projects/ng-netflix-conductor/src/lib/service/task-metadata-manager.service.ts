@@ -30,7 +30,7 @@ export class TaskMetadataManagerService {
     const subject = new Subject<TaskDefinition>();
     this.client.post<TaskDefinition[]>(`/metadata/taskdefs`, [task]).subscribe(() => {
       this.getTask(task.name).subscribe((taskResponse: TaskDefinition) => {
-        if (taskResponse.name === task.name) {
+        if (taskResponse.name !== task.name) {
           subject.error('Create a task, but can not find task');
           return;
         }

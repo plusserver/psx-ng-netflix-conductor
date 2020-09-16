@@ -37,7 +37,7 @@ export class WorkflowMetadataManagerService {
       () => {
         this.getWorkflow(workflow.name).subscribe(
           (workflowObject: WorkflowMetadataDefinition) => {
-            if (workflowObject.name === workflow.name) {
+            if (workflowObject.name !== workflow.name) {
               subject.error('Create a workflow, but can not find workflow');
               return;
             }
